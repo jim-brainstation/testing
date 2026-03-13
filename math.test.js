@@ -7,13 +7,25 @@ test("it adds two numbers", () => {
     expect(sum).toEqual(5);
 })
 
+test("it adds two negative numbers", () => {
+    const sum = add(-2, -3);
+
+    expect(sum).toEqual(-5);
+})
+
+test("it adds zeros", () => {
+    const sum = add(0, 0);
+
+    expect(sum).toEqual(0);
+})
+
 describe("multiply utility", () => {
     it("multiplies two numbers", () => {
         const product = multiply(2, 5);
     
         expect(product).toEqual(10);
     })
-    
+
     it("can only multiply two numbers", () => {
         const product = multiply("random string", 10);
     
